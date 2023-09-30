@@ -1,0 +1,180 @@
+$white_color: #FFF;
+$dark_color: #333;
+$orange_color: #ffc400;
+$font_normal: 16px;
+$font_medium: 14px;
+$font_small: 12px;
+
+$width90: 90px;
+$width100: 130px;
+
+html, body {
+    height: 99.9%;
+    background-color: black;
+    color: beige;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: $font_normal;
+    background-color: $orange_color;
+}
+
+.header {
+    height: 70px;
+    background-image: url(../img/sl_040220_29550_07.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-position: -200px;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        background-color: $dark_color;
+    }
+
+    .main {
+        flex: 1 1 auto;
+        background-color: $white_color;
+        padding-top: 15px;
+    }
+
+    .footer {
+        background-color: $white_color;
+    }
+}
+
+
+
+.content {
+    color: #000;
+    // max-width: 800px;
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.table {
+    // max-width: 80vw;
+    margin: 10px auto;
+    // width: 1500px;
+    border: #000 solid 1px;
+}
+
+.item {
+    border: #000b2e solid 1px;
+    padding: 3px;
+}
+
+.item_1 {
+    width: 30px;
+}
+
+.item_3,
+.item_4,
+.item_5,
+.item_6,
+.item_7,
+.item_9 {
+    width: $width90;
+    padding: 3px;
+}
+
+.item_8 {
+    width: $width100;
+    padding: 3px;
+}
+
+.row_1 {
+    font-weight: bold;
+}
+
+// *************
+// *** COLOR ***
+// *************
+
+#wait {
+    background-color: #fff;
+}
+
+#inProcess {
+    background-color: #fbff00;
+}
+
+#completed {
+    background-color: #59ad21;
+}
+
+// ****************
+// *** ADAPTIVE ***
+// ****************
+
+@media all and (max-width: 1350px) {
+    html, body {
+        font-size: $font_medium;
+    }
+
+    .content {
+        max-width: 90vw;
+    }
+}
+
+@media all and (max-width: 1050px) {
+    html, body {
+        font-size: $font_small;
+    }
+
+    .content {
+        max-width: 95vw;
+    }
+
+    .item_1 {
+        width: 20px;
+    }
+
+    .item_3,
+    .item_4,
+    .item_5,
+    .item_6,
+    .item_7,
+    .item_9 {
+        width: 50px;
+        padding: 3px;
+    }
+
+    .item_8 {
+        width: 70px;
+        padding: 3px;
+    }
+}
+
+// **********************
+// *** LANDSCAPE MODE ***
+// **********************
+
+@media screen and (orientation: landscape) {
+    .wrapper__background {
+      display: none;
+    }
+  }
+
+@media screen and (orientation: portrait) {
+    body {
+        background-color: #FFF;
+    }
+    .header {
+        display: none;
+    }
+    .wrapper__background {
+        height: 100vh;
+        background: url('../img/rotate.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    .main {
+      display: none;
+    }
+    .footer {
+        display: none;
+    }
+}

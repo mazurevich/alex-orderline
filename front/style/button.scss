@@ -1,0 +1,24 @@
+$dark: rgb(112, 112, 112);
+$light: beige;
+$orange_color: #ff9100;
+
+
+.btn-outer {
+    display: flex;
+    justify-content: end;
+
+    .btn {
+        width: 200px;
+        padding: 5px;
+        color: $light;
+        border: 0;
+        background-color: $dark;
+        text-transform: uppercase;
+    }
+
+    .btn:hover {
+        color: $light;
+        background-color: $orange_color;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,7 @@
+.idea
+node_modules
+dist
+build
+orderline.code-workspace
+sborka
+for_pushing
