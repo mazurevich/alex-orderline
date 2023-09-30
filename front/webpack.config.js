@@ -6,7 +6,7 @@ module.exports = {
     entry: './index.js',
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'sborka'),
+        path: path.resolve(__dirname, 'build'),
         clean: true
     },
     plugins: [
